@@ -1,0 +1,160 @@
+/*pc버전 ~1920px ~1200px
+테블릿 ~1024px ~768px
+모바일 ~480px ~320px*/
+
+/*-------------------PC버전  (하프스크롤 가능)----------------------*/
+@media screen and (max-width:1920px){
+    html,body{width: 100%;}
+}
+
+/*-------------------테블릿 버전 (하프스크롤 가능)--------------------*/
+@media screen and (max-width:1200px){
+    html,body{font-size: 12px;}
+    
+    /*skills 서브타이틀 그림자 효과*/
+    #tit_list li:nth-child(1) .skills_subtit a::after,#tit_list li:nth-child(2) .skills_subtit a::after{
+        top: 125px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    html,body{font-size: 11px;}
+    section#about{height: 1540px;}
+    section#skills{height: 3080px;}
+    section#work{height: 5390px;}/*수정부분 : 770*(포폴개수+1)*/
+    section#contact{height: 1540px;}
+    #skills1{height: 2310px;}
+    #main,.contents_tit,#about1,#work1,#work2,#work3,#work4,#work5,#work6,#contact1{/*수정부분 : 포폴 아이디 추가*/
+            height: 770px;
+        }
+    
+    /*about 창 일러스트*/
+    #about1 img { padding-left:5%;}
+    #about1  img.grow{width:40%;}
+
+    /*about 텍스트박스*/
+    #about1  #about_txtbox{width: 41%; height:400px; padding-right: 5%;}
+    
+    /* skills 서브타이틀 그림자s효과*/
+    #tit_list li:nth-child(1) .skills_subtit a:after,#tit_list li:nth-child(2) .skills_subtit a:after{top: 115px;}
+    
+    /*work*/
+    #work_list{height:4620px ;} /*수정부분 : 770*포폴개수*/
+    .work_txtbox .work_subtit a{font-size: 39px;}
+    
+    /*contact 데코 요소*/
+    #large_circle2{top: 550px;}
+
+    /*--contact 텍스트 영역--*/
+    #contact_txtbox{margin-top: 530px;}
+}
+
+@media screen and (max-width:980px){
+    html,body{font-size: 11px;}
+    
+    /*menu*/
+    #main_menu{min-width: 270px;}
+    
+    /*main*/
+    #main{height: 1540px;}
+    #main #main_left,#main #main_right{position: relative; width: 100%; float: none; height: 50%;}
+    #change{display: none;}
+    section#skills>.contents_tit{background: #5E62D1;}
+
+    /*skills*/
+    #txt_list li{padding: 50% 10%;}
+    #tit_list li .skills_subtit{padding-top: 50%;}
+    #tit_list li:nth-child(3) .skills_subtit{padding-top: 50%;}
+    
+    /* skills 서브타이틀 그림자s효과*/
+    #tit_list li:nth-child(1) .skills_subtit a:after,#tit_list li:nth-child(2) .skills_subtit a:after{top: 115px;}
+}
+
+/*-----------------------------모바일 버전  (하프스크롤 불가능)---------------------------------*/
+    
+@media screen and (max-width:768px){
+    html,body{font-size: 10px;}
+    
+    /*menu*/
+    #main_menu{min-width: 240px;}
+    #main_menu ul li{padding-bottom: 20%;}
+    
+    /*main*/
+    #main{height: 770px;}
+    #main #main_left #main_txtbox{padding-left: 3%; width: 80%;}
+    #main #main_left{height: 100%;}
+    #main #main_right{display: none;}
+    
+    /*about*/
+    #about1 img{padding: 150px 30% 50px 30%; float: none; display: block;}
+    #about1 #about_txtbox{ width: 60%;  height: 200px; float: none; padding: 0 20%; }
+    #about_subtit,#about_txt{text-align: center;}
+    
+    /*skills*/
+    section#skills{height: 2270px;}
+    #skills1{height: 1500px;}
+    #txt_list li{padding: 30% 10%;}
+    #tit_list li .skills_subtit{padding-top: 35%;}
+    #tit_list li .skills_subtit a{font-size: 5.5em;}
+    #tit_list li:nth-child(3) .skills_subtit{padding-top: 45%;}
+    
+    /* skills 서브타이틀 그림자s효과*/
+    #tit_list li:nth-child(1) .skills_subtit a:before,#tit_list li:nth-child(2) .skills_subtit a:before,#tit_list li:nth-child(3) .skills_subtit a:before{top:5px; left: 5px;}
+    
+    #tit_list li:nth-child(1) .skills_subtit a:after,#tit_list li:nth-child(2) .skills_subtit a:after{
+        top: 88px; left: 5px;
+    }
+    /*work*/
+    .work_left{width: 100%; height: 60%;}
+    .work_right{width: 100%; height: 40%; bottom: 0;}
+    .work_left img{padding: 15% 20% 10% 20%;}
+    .work_right .work_txtbox{height: 100%;}
+    .work_right .work_subtit a, .work_keyword, .work_txtbox .txt{text-align: center;}
+    .work_txtbox .visit_btn{left: 0;right: 0;margin: auto;}
+    
+    /*contens*/
+    section#contact .contents_tit h2 a{ font-size:9.5em; }
+  
+}
+
+
+@media screen and (max-width:480px){
+    html,body{font-size: 9px;}
+    
+    /*menu*/
+    #main_menu{min-width: 220px;}
+    
+    /*contents*/
+    .contents_tit h2{height: 100px;}
+    .contents_tit h2 a ,section#contact .contents_tit h2 a{font-size: 7em;}
+    section#about .contents_tit h2 a:before,section#skills .contents_tit h2 a:before, section#work .contents_tit h2 a:before,section#contact .contents_tit h2 a:before{top:5px; left: 5px;}
+    
+    /*about*/
+    #about1 #about_txtbox{width: 80%; padding: 0 10%;}
+    #about1 img.grow{width: 50%;}
+    #about1 img{padding: 150px 25% 70px 25%;}
+
+    /*skills*/
+    section#skills{height: 1670px;}
+    #skills1{height: 900px;}
+    #right_box{display: none;}
+    #left_box{width: 100%;}
+    #txt_list li{padding: 50px 10%;}
+    #txt_list li:nth-child(even){background:#5E62D1;}
+    #txt_list li:nth-child(even) p{color: #E0E2EE;}
+
+    /*work*/
+    .work_left{height: 45%;}
+    .work_right{height: 55%;}
+    .work_txtbox{width:85%; margin-left: 7.5%; margin-right: 7.5%;}
+    .work_txtbox .visit_btn{width: 130px; height: 40px;}
+    .work_txtbox .visit_btn a{line-height: 40px; font-size: 15px;}
+    .work_txtbox .visit_btn:before{top: 3px; left: 3px;}
+    
+    /*contact*/
+    #contact_img_01{display: none;}
+}
+
+
+    
+

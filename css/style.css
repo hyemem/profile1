@@ -1,0 +1,1155 @@
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+/*기본설정*/
+html,
+body {
+    width: 100%;
+    font-size: 13px;
+    overflow-x:hidden;
+}
+
+section {
+    position: relative;
+    width: 100%;
+}
+
+/*----------------header----------------*/
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    z-index: 100;
+}
+
+header #logo {
+    position: relative;
+    width: 80px;
+    height: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 3%;
+    z-index: 40;
+}
+
+header #logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #5fecc8;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+}
+
+header #logo a span {
+    display: block;
+    font-weight: 400;
+}
+
+
+header #menu_btn {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 18px;
+    margin: auto;
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    z-index: 300;
+}
+
+header #menu_btn a {
+    display: block;
+}
+
+#t_stick {
+    display: block;
+    width: 35px;
+    height: 0px;
+    margin: 22.5px 16px 16px 16px;
+    border-bottom: 3.5px solid #5e62d1;
+    border-radius: 3.5px;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+
+#b_stick {
+    display: block;
+    width: 35px;
+    height: 0px;
+    margin: 0 16px;
+    border-bottom: 3.5px solid #5e62d1;
+    border-radius: 3.5px;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+
+
+#t_stick.selected{
+    -webkit-transform: translateY(9.5px) rotate(45deg);
+    -moz-transform: translateY(9.5px) rotate(45deg);
+    -ms-transform: translateY(9.5px) rotate(45deg);
+    -o-transform: translateY(9.5px) rotate(45deg);
+    transform: translateY(9.5px) rotate(45deg);
+    border-bottom: 3.5px solid #5fecc8;
+}
+
+
+#b_stick.selected{
+    -webkit-transform: translateY(-9.5px) rotate(-45deg);
+    -moz-transform: translateY(-9.5px) rotate(-45deg);
+    -ms-transform: translateY(-9.5px) rotate(-45deg);
+    -o-transform: translateY(-9.5px) rotate(-45deg);
+    transform: translateY(-9.5px) rotate(-45deg);
+    border-bottom: 3.5px solid #5fecc8;
+}
+
+
+/*---------------메인메뉴---------------*/
+#menu_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+}
+
+/*-------메뉴 배경--------*/
+.menu_bg{
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #5fecc8;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    -webkit-transition-delay: .2s;
+    -moz-transition-delay: .2s;
+    -ms-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+}
+
+#menu_bg1 {left: 50%;}
+#menu_bg2 {right: 50%;}
+.menu_bg.selected { width: 50%; }
+
+
+/*-------메뉴 리스트--------*/
+#main_menu {
+    position: relative;
+    width: 20%;
+    min-width: 335px;
+    height: 70%;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-40%);
+    -moz-transform: translateX(-50%) translateY(-40%);
+    -ms-transform: translateX(-50%) translateY(-40%);
+    -o-transform: translateX(-50%) translateY(-40%);
+    transform: translateX(-50%) translateY(-40%);
+    z-index: 150;
+    
+}
+
+#main_menu ul {
+    width: 100%;
+    height: 100%;
+}
+
+#main_menu ul li {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    padding-bottom: 10%;
+    box-sizing: border-box;
+}
+
+#main_menu ul li a {
+    position: relative;
+    opacity: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 4.375em;
+    color: #5fecc8;
+    text-shadow: -1px 0 #5e62d1, 1px 0 #5e62d1, 0 -1px #5e62d1, 0 1px #5e62d1;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    font-weight: 700;
+    text-align: center;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+}
+
+
+#main_menu ul li a:hover{
+    color: #7075d8;
+}
+
+/*메인메뉴 형광펜 효과*/
+#main_menu ul li a:before{
+    content:'';
+    position: absolute;
+    display: block;
+    width: 0%;
+    height: 50%;
+    border-radius: 21px;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #5e62d1;
+    opacity: 0;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+
+#main_menu ul li a:hover:before{
+    width: 100%;
+    opacity: 0.4;
+}
+
+#main_menu ul li:nth-child(1) a:before, #main_menu ul li:nth-child(4) a:before{
+    margin-left: 17.5%;
+}
+
+#main_menu ul li:nth-child(1) a:hover:before, #main_menu ul li:nth-child(4) a:hover:before{
+    width: 65%;
+    opacity: 0.4;
+}
+
+#main_menu ul li:nth-child(2) a:before, #main_menu ul li:nth-child(3) a:before{
+    margin-left: 12.5%;
+}
+
+#main_menu ul li:nth-child(2) a:hover:before, #main_menu ul li:nth-child(3) a:hover:before{
+    width: 75%;
+    opacity: 0.4;
+}
+
+/*--------------------메인 화면--------------------*/
+
+#main {
+    position: relative;
+    width: 100%;
+    height: 970px;
+}
+
+/*----------메인 왼쪽 박스-----------*/
+#main #main_left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 200%;
+    float: left;
+    background: #5e62d1;
+    z-index: 30;
+}
+
+#main #main_left #main_txtbox{
+    padding-top: 300px;
+    padding-left: 7%;
+    width: 62.5%;
+    height: 339px;
+}
+
+#main_txtbox #main_subtit{
+    display: block;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6em;
+    color: #5fecc8;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#main_txtbox p{
+    position: relative;
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 5em;
+    line-height: 1.2;
+    color: #5fecc8;
+    font-weight: 700;
+}
+
+#main_txtbox p > span {
+    display: block;
+    font-weight: 300;
+}
+
+#main_txtbox p:before {
+    content: 'PORTFOLIO';
+    position: absolute;
+    color: #5e62d1;
+    text-shadow: -1px 0 #5fecc8, 1px 0 #5fecc8, 0 -1px #5fecc8, 0 1px #5fecc8;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    bottom: -6px;
+    left: 5px;
+    z-index: -1;
+}
+
+/*----------메인 늘어나는 박스-----------*/
+
+#change{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 200%;
+    width: 0;
+    background: #5e62d1;
+    z-index: 70;
+}
+
+/*----------메인 오른쪽 박스-----------*/
+
+#main #main_right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    float: left;
+    background: url(../img/pattern.png) center center repeat;
+    background-color: #e0e2ee;
+}
+
+#main_right #large_circle1{
+    position: relative;
+    width: 390px;
+    height: 390px;
+    border-radius: 50%;
+    background: #5e62d1;
+    margin: auto;
+    -webkit-animation:moveY1 1.5s infinite alternate;
+    -moz-animation:moveY1 1.5s infinite alternate;
+    -ms-animation:moveY1 1.5s infinite alternate;
+    -o-animation:moveY1 1.5s infinite alternate;
+    animation:moveY1 1.5s infinite alternate;
+}
+
+#main_right #large_circle1:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid #5e62d1;
+    top: 10px;
+    left: 10px;
+}
+
+#small_circle {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #5fecc8;
+    right: 30%;
+    top: 20%;
+    -webkit-animation:moveY2 5s infinite ease-out;
+    -moz-animation:moveY2 5s infinite ease-out;
+    -ms-animation:moveY2 5s infinite ease-out;
+    -o-animation:moveY2 5s infinite ease-out;
+    animation:moveY2 5s infinite ease-out;
+}
+
+#round_sqr1 {
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    border-radius: 13px;
+    border: 3px solid #5e62d1;
+    background: #5fecc8;
+    left: 14%;
+    bottom: 40%;
+    -webkit-animation:width1 2s ease-in;
+    -moz-animation:width1 2s ease-in;
+    -ms-animation:width1 2s ease-in;
+    -o-animation:width1 2s ease-in;
+    animation:width1 2s ease-in;
+}
+
+#round_sqr2 {
+    position: absolute;
+    width: 50px;
+    height: 15px;
+    border-radius: 10px;
+    border: 3px solid #5e62d1;
+    right: 25%;
+    bottom: 25%;
+    -webkit-animation:width2 1s ease-in;
+    -moz-animation:width2 1s ease-in;
+    -ms-animation:width2 1s ease-in;
+    -o-animation:width2 1s ease-in;
+    animation:width2 1s ease-in;
+}
+
+
+/*------------(공통) 콘텐츠 제목------------*/
+.contents_tit{
+    width: 100%;
+    height: 970px;
+    background:#5e62d1;
+}
+
+.contents_tit h2{
+    position: relative;
+    width: 100%;
+    height: 160px;
+    top: 50%;
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
+    transform:translateY(-50%);
+    z-index: 90;
+    
+}
+
+.contents_tit h2 a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #5fecc8;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 9em;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+}
+
+
+/*------------skills 섹션------------*/
+section#skills {
+    width: 100%;
+    height: 3880px;
+}
+
+section#skills:before{
+    clear: both;
+}
+
+/* skills 제목 배경 */
+section#skills>.contents_tit{
+    background: url(../img/pattern.png) center center repeat;
+    background-color:#e0e2ee;
+}
+
+/*------------skills 제목 그림자------------*/
+section#skills .contents_tit h2 a:before{
+    content: 'SKILLS';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 10px;
+    left: 10px;
+    color: #5e62d1;
+    text-shadow: -1px 0 #5fecc8, 1px 0 #5fecc8, 0 -1px #5fecc8, 0 1px #5fecc8;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    z-index: -1;
+}
+
+/*------------skills 내용------------*/
+#skills1 {
+    position: relative;
+    width: 100%;
+    height: 2910px;
+}
+
+
+/*-----skills 왼쪽 설명-----*/
+
+#left_box {
+    display: block;
+    position: relative;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #e0e2ee;
+    float: left;
+}
+
+#txt_list {
+    width: 100%;
+    height: 100%;
+}
+
+#txt_list li {
+    position: absolute;
+    width: 100%;
+    height: 33.333%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .3s ease-out;
+    -ms-transition: .3s ease-out;
+    -moz-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
+    transition: .3s ease-out;
+    padding:35% 10%;
+    box-sizing: border-box;
+}
+
+#txt_list li:nth-child(1) {
+    opacity: 1;
+}
+
+
+#txt_list li p {
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6em;
+    font-weight: 500;
+    text-align: left;
+    line-height: 3;
+}
+
+
+/*-----skills 오른쪽 제목-----*/
+#right_box {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #5e62d1;
+    float: left;
+}
+
+#tit_list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#tit_list li {
+    width: 100%;
+    height: 33.3333%;
+}
+
+#tit_list li .skills_subtit {
+    width: 100%;
+    height: 40%; 
+    padding-top:30%;
+}
+
+#tit_list li:nth-child(3) .skills_subtit {
+    width: 100%;
+    height: 20%; 
+    padding-top:40%;
+}
+
+#tit_list li .skills_subtit a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #e0e2ee;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 6.5em;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.5;
+    z-index: 1;
+}
+
+/*------------skills 서브타이틀 그림자 효과------------*/
+
+/*HTML5&CSS3부분*/
+#tit_list li:nth-child(1) .skills_subtit a:before{
+    content: 'HTML5';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 7px;
+    left: 7px;
+    color: #5e62d1;
+    text-shadow: -1px 0 #e0e2ee, 1px 0 #e0e2ee, 0 -1px #e0e2ee, 0 1px #e0e2ee;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    z-index: -1;
+}
+
+
+#tit_list li:nth-child(1) .skills_subtit a:after{
+    content: 'CSS3';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 135px;
+    left: 7px;
+    color: #5e62d1;
+    text-shadow: -1px 0 #e0e2ee, 1px 0 #e0e2ee, 0 -1px #e0e2ee, 0 1px #e0e2ee;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    z-index: -1;
+}
+
+
+/*JS부분*/
+#tit_list li:nth-child(2) .skills_subtit a:before{
+    content: 'JAVA';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 7px;
+    left: 7px;
+    color: #5e62d1;
+    text-shadow: -1px 0 #e0e2ee, 1px 0 #e0e2ee, 0 -1px #e0e2ee, 0 1px #e0e2ee;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    z-index: -1;
+}
+
+
+#tit_list li:nth-child(2) .skills_subtit a:after{
+    content: 'SCRIPT';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 135px;
+    left: 7px;
+    color: #5e62d1;
+    text-shadow: -1px 0 #e0e2ee, 1px 0 #e0e2ee, 0 -1px #e0e2ee, 0 1px #e0e2ee;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    z-index: -1;
+}
+
+/*OTHERS부분*/
+#tit_list li:nth-child(3) .skills_subtit a:before{
+    content: 'OTHERS';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 7px;
+    left: 7px;
+    color: #5e62d1;
+    text-shadow: -1px 0 #e0e2ee, 1px 0 #e0e2ee, 0 -1px #e0e2ee, 0 1px #e0e2ee;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    z-index: -1;
+}
+
+/*-------------------work 섹션-------------------*/
+section#work {/*수정부분 : 970*포폴개수+970*/
+    width: 100%;
+    height: 6790px;
+    background-image: url(../img/pattern.png);
+    background-color:#e0e2ee;
+}
+
+/*------------work 제목 그림자------------*/
+
+section#work .contents_tit h2 a:before{
+    content: 'WORK';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 10px;
+    left: 10px;
+    color: #5e62d1;
+    text-shadow: -1px 0 #5fecc8, 1px 0 #5fecc8, 0 -1px #5fecc8, 0 1px #5fecc8;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    z-index: -1;
+}
+
+#work_list{
+    width: 100%;
+    height: 5820px; /*수정부분 : 970*포폴개수*/
+}
+
+
+#work1,#work2,#work3,#work4,#work5,#work6 {  /*수정부분 : 포폴 아이디 추가*/
+    position: relative;
+    width: 100%;
+    height: 970px;
+}
+
+/*------------포트폴리오 (공통영역) 왼쪽------------*/
+.work_left {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: -100px;
+    opacity: 0;
+}
+
+.work_left img {
+    position: relative;
+    padding: 0 14%;
+    top: 50%;
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
+    transform:translateY(-50%);
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+}
+
+/*------------포트폴리오 (공통영역) 오른쪽------------*/
+
+.work_right {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: -100px;
+    opacity: 0;
+}
+
+
+.work_txtbox {
+    position: relative;
+    width: 70%;
+    height: 350px;
+    top: 50%;
+    -webkit-transform:translateY(-50%);
+    -moz-transform:translateY(-50%);
+    -ms-transform:translateY(-50%);
+    -o-transform:translateY(-50%);
+    transform:translateY(-50%);
+    margin-left: 14%;
+    margin-right: 14%;
+    word-break: keep-all;
+}
+
+
+.work_txtbox .work_subtit {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+.work_txtbox .work_subtit a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 4em;
+    font-weight: 700;
+    text-align: left;
+}
+
+.work_keyword{
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.work_txtbox .txt {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/*--버튼 --*/
+.work_txtbox .visit_btn {
+    position: absolute;
+    display: block;
+    width: 130px;
+    height: 45px;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    -webkit-transform: skew(-25deg);
+    -moz-transform: skew(-25deg);
+    -ms-transform: skew(-25deg);
+    -o-transform: skew(-25deg);
+    transform: skew(-25deg);
+    background: #5e62d1;
+    left: 3%;
+}
+
+.work_txtbox .visit_btn:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #99a7fc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s ease;
+}
+
+
+/*--버튼 before stroke요소---*/
+.work_txtbox .visit_btn:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    border: 2px solid #5e62d1;
+}
+
+
+/*--버튼 텍스트--*/
+.work_txtbox .visit_btn a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 45px;
+    text-align: center;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    -webkit-transform: skew(25deg);
+    -moz-transform: skew(25deg);
+    -ms-transform: skew(25deg);
+    -o-transform: skew(25deg);
+    transform: skew(25deg);
+    z-index: 10;
+}
+
+/*버튼 hover 효과*/
+.work_txtbox .visit_btn:hover a {
+    color: #3b3faa;
+}
+
+
+.work_txtbox .visit_btn:hover:after {
+    width: 100%;
+}
+
+
+/*------------about 섹션------------*/
+
+section#about {
+    position: relative;
+    clear: both;
+    height: 1940px;
+}
+
+section#about .contents_tit h2 a:before{
+    content: 'ABOUT';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 10px;
+    left: 10px;
+    color: #5e62d1;
+    text-shadow: -1px 0 #5fecc8, 1px 0 #5fecc8, 0 -1px #5fecc8, 0 1px #5fecc8;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    z-index: -1;
+}
+
+/*------------about 내용------------*/
+
+#about1 {
+    position: relative;
+    width: 100%;
+    height: 970px;
+    background: url(../img/pattern.png) center center repeat;
+    background-color: #e0e2ee;
+}
+
+/*about 창 일러스트*/
+#about1 img {
+    padding: 260px 9% 0 20%;
+    width:0;
+    height: auto;
+    opacity: 0;
+    float: left;
+    -webkit-transition: .7s ease;
+    -moz-transition: .7s ease;
+    -ms-transition: .7s ease;
+    -o-transition: .7s ease;
+    transition: .7s ease;
+}
+
+#about1 img.grow{
+    width: 25%;
+    opacity: 1;
+}
+
+
+/*about 텍스트박스*/
+#about1  #about_txtbox {
+    padding-top: 260px;
+    padding-right: 20%;
+    width: 26%;
+    height: 460px;
+    opacity: 0;
+    float: left;
+}
+
+#about_subtit {
+    padding: 20px 0;
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/*형광펜 효과*/
+mark{
+    background-color: #afbbff;
+}
+
+
+#about_txt {
+    color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.3em;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.8;
+}
+
+
+
+
+/*--------------contact 섹션--------------*/
+
+section#contact{
+    position: relative;
+    width: 100%;
+    height: 1940px;
+}
+
+
+/*------------CONTACT 제목 그림자------------*/
+
+section#contact .contents_tit h2 a:before{
+    content: 'CONTACT';
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 10px;
+    left: 10px;
+    color: #5e62d1;
+    text-shadow: -1px 0 #5fecc8, 1px 0 #5fecc8, 0 -1px #5fecc8, 0 1px #5fecc8;
+    /*왼쪽 오른쪽 위쪽 아래쪽에 text-shadow를 삽입 IE에서 크로스 브라우징 안되는 text-fill 효과 대신 사용*/
+    z-index: -1;
+}
+
+
+/*--contact 내용--*/
+#contact1 {
+    position: relative;
+    width: 100%;
+    height: 970px;
+    background-color: #e0e2ee;
+    overflow: hidden;
+}
+
+/*--contact 데코레이션 도형 및 사진--*/
+
+#round_sqr3,#round_sqr4{
+    width: 26px;
+    height: 26px;
+    border:3px solid #5e62d1;
+    border-radius: 16px;
+    position: absolute;
+    opacity: 0;
+}
+
+#round_sqr3{
+    top: 100px;
+    left: -1%;
+}
+
+#round_sqr4{
+    top:330px;
+    right: 8%;
+}
+
+
+#large_circle2{
+    position: absolute;
+    top: 750px;
+    left: 85%;
+    width: 318px;
+    height: 318px;
+    background: #5e62d1;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-animation:moveY3 1.5s infinite alternate;
+    -moz-animation:moveY3 1.5s infinite alternate;
+    -ms-animation:moveY3 1.5s infinite alternate;
+    -o-animation:moveY3 1.5s infinite alternate;
+    animation:moveY3 1.5s infinite alternate;
+}
+
+
+#large_circle2:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 318px;
+    height: 318px;
+    border:3px solid #5e62d1;
+    border-radius: 50%;
+}
+
+
+#contact_img_01{
+    position: absolute;
+    bottom: 110px;
+    right: 8%;
+    width: 25%;
+    min-width: 260px;
+    height: auto;
+    opacity: 0;
+}
+
+
+#contact_img_02{
+    position: absolute;
+    width:6%;
+    min-width: 90px;
+    height: auto;
+    bottom: 0;
+    right: 30%;
+    -webkit-animation:rotate1 3s infinite alternate;
+    -moz-animation:rotate1 3s infinite alternate;
+    -ms-animation:rotate1 3s infinite alternate;
+    -o-animation:rotate1 3s infinite alternate;
+    animation:rotate1 3s infinite alternate;
+    transform-origin: bottom;
+    opacity: 0;
+}
+
+/*--contact 텍스트 영역--*/
+
+#contact_txtbox{
+    width: 450px;
+    height: auto;
+    margin-top: 730px;
+    margin-left: 5%;
+}
+
+#contact_tit{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#contact_tit a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #5e62d1;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: left;
+}
+
+#phone{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+#email{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#phone a span,#email a span{
+    color: #444;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: left;
+}
+
+
+#phone a,#email a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #444;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-align: left;
+}
+
+
+/*--contact 아이콘 영역--*/
+
+#icon_list{
+    width: 24%;
+    height: 58px;
+}
+
+#icon_list li{
+    width: 40%;
+    margin-left: 10%;
+    float: left;
+}
+
+#icon_list li:nth-child(2){
+    margin-left: 0;
+    margin-right: 10%;
+}
+
+#icon_list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#icon_list li a img{
+    width: 100%;
+    height: auto;
+}
+
+
+

@@ -1,0 +1,155 @@
+/*메인 화면 애니메이션*/
+/*large_circle1*/
+
+@-webkit-keyframes moveY1{
+    from{top:17%;}
+    to{top: 20%;}
+}
+
+@-moz-keyframes moveY1{
+    from{top:17%;}
+    to{top: 20%;}
+}
+
+@-ms-keyframes moveY1{
+    from{top:17%;}
+    to{top: 20%;}
+}
+
+@-o-keyframes moveY1{ 
+    from{top:17%;}
+    to{top: 20%;}
+}
+
+
+/*small_circle*/
+
+@-webkit-keyframes moveY2{
+    0%{top: 7%; right: 17%;}
+    30%{ top: 10%; right: 10%;}
+    50%{top: 7%; right: 22%;}
+    70%{top: 3%; right: 20%;}
+    100%{top: 7%; right: 17%;}
+}
+
+@-moz-keyframes moveY2{
+    0%{top: 7%; right: 17%;}
+    30%{ top: 10%; right: 10%;}
+    50%{top: 7%; right: 22%;}
+    70%{top: 3%; right: 20%;}
+    100%{top: 7%; right: 17%;}
+}
+
+@-ms-keyframes moveY2{
+    0%{top: 7%; right: 17%;}
+    30%{ top: 10%; right: 10%;}
+    50%{top: 7%; right: 22%;}
+    70%{top: 3%; right: 20%;}
+    100%{top: 7%; right: 17%;}
+}
+
+@-o-keyframes moveY2{ 
+    0%{top: 7%; right: 17%;}
+    30%{ top: 10%; right: 10%;}
+    50%{top: 7%; right: 22%;}
+    70%{top: 3%; right: 20%;}
+    100%{top: 7%; right: 17%;}
+}
+
+
+
+/*round_sqr1*/
+
+@-webkit-keyframes width1{
+    from{width: 20px;}
+    to{width: 70px;}
+}
+
+@-moz-keyframes width1{
+    from{width: 20px;}
+    to{width: 70px;}
+}
+
+@-ms-keyframes width1{
+    from{width: 20px;}
+    to{width: 70px;}
+}
+
+@-o-keyframes width1{ 
+    from{width: 20px;}
+    to{width: 70px;}
+}
+
+
+/*round_sqr2 */
+
+@-webkit-keyframes width2{
+    from{width: 15px;}
+    to{width: 50px;} 
+}
+
+@-moz-keyframes width2{
+    from{width: 15px;}
+    to{width: 50px;} 
+}
+
+@-ms-keyframes width2{
+    from{width: 15px;}
+    to{width: 50px;} 
+}
+
+@-o-keyframes width2{ 
+    from{width: 15px;}
+    to{width: 50px;} 
+}
+
+
+/*large_circle2*/
+
+@-webkit-keyframes moveY3{
+    from{top:750px;}
+    to{top: 760px;}
+}
+
+@-moz-keyframes moveY3{
+    from{top:750px;}
+    to{top: 760px;}
+}
+
+@-ms-keyframes moveY3{
+    from{top:750px;}
+    to{top: 760px;}
+}
+
+@-o-keyframes moveY3{ 
+    from{top:750px;}
+    to{top: 760px;}
+}
+
+/*contact_img_02*/
+
+@-webkit-keyframes rotate1{
+    0%{transform:rotate(-5deg);}
+    50%{transform: rotate(0deg);}
+    100%{transform:rotate(5deg);}
+}
+
+@-moz-keyframes rotate1{
+    0%{transform:rotate(-5deg);}
+    50%{transform: rotate(0deg);}
+    100%{transform:rotate(5deg);}
+}
+
+@-ms-keyframes rotate1{
+    0%{transform:rotate(-5deg);}
+    50%{transform: rotate(0deg);}
+    100%{transform:rotate(5deg);}
+}
+
+@-o-keyframes rotate1{ 
+    0%{transform:rotate(-5deg);}
+    50%{transform: rotate(0deg);}
+    100%{transform:rotate(5deg);}
+}
+
+

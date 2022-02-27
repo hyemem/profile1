@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>HYEMEM's Profile Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--로고-->
+        <h1 id="logo"><a href="#"><span>HYE</span>MEM</a></h1>
+
+        <!--메뉴 버튼-->
+        <h2 id="menu_btn">
+            <a href="#">
+                <span id="t_stick"></span>
+                <span id="b_stick"></span>
+            </a>
+        </h2>
+
+        <!--메인메뉴-->
+        <div id="menu_wrap">
+            <nav id="main_menu">
+                <ul>
+                    <li><a href="#main">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#work">WORK</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div id="menu_bg1" class="menu_bg"></div>
+            <div id="menu_bg2" class="menu_bg"></div>
+        </div>
+    </header>
+    <!--메인화면-->
+    <div id="main">
+        <!--메인 왼쪽 화면-->
+        <div id="main_left">
+            <div id="main_txtbox">
+                <span id="main_subtit"> 배움에 대한 열정을 가진 HYEMEM 입니다.</span>
+                <p><span>HYEMEM’S</span>PORTFOLIO</p>
+            </div>
+        </div>
+
+        <!--늘어나는 화면-->
+        <div id="change"></div>
+
+
+        <!--메인 오른쪽 화면-->
+        <div id="main_right">
+            <div id="large_circle1"></div>
+            <div id="small_circle"></div>
+            <div id="round_sqr1"></div>
+            <div id="round_sqr2"></div>
+        </div>
+    </div>
+
+    <!--skills 섹션-->
+    <section id="skills">
+
+        <!--skills 제목-->
+        <div class="contents_tit">
+            <h2><a href="#">SKILLS</a></h2>
+        </div>
+
+        <!--skills 내용-->
+        <div id="skills1">
+
+            <!--skills 왼쪽 박스-->
+            <div id="left_box">
+                <ul id="txt_list">
+
+                    <!--html&css 텍스트 내용-->
+                    <li>
+                        <p>한국형 웹 콘텐츠 접근성 지침(KWCAG 2.1) 준수</p>
+                        <p>시멘틱 마크업을 통한 의미있는 구조 설계</p>
+                        <p>반응형 & 적응형 웹사이트 구축</p>
+                        <p>CSS 3.0 &amp; 크로스브라우징</p>
+                        <p>SASS를 이용한 프리프로세싱</p>
+                    </li>
+
+                    <!--javascript 텍스트 내용-->
+                    <li>
+                        <p>비동기 통신(ajax)에 대한 이해</p>
+                        <p>jQuery DOM을 이용한<br>메인 메뉴, 반응형 비주얼 슬라이드, <br>2depth menu animation 등 구현</p>
+                    </li>
+
+                    <!--others 텍스트 내용-->
+                    <li>
+                        <p>UI / UX에 대한 이해</p>
+                        <p>Photoshop, Figma를  활용한 웹 사이트 시안 제작</p>
+                        <p>Premiere, After Effect를 활용한 영상 제작</p>
+                        <p>Github 관리</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!--skills 오른쪽 박스-->
+            <div id="right_box">
+                <ul id="tit_list">
+
+                    <!--html&css 제목-->
+                    <li>
+                        <p class="skills_subtit"><a href="#">HTML5<br>CSS3</a></p>
+                    </li>
+
+                    <!--javascript 제목-->
+                    <li>
+                        <p class="skills_subtit"><a href="#">JAVA<br>SCRIPT</a></p>
+                    </li>
+
+                    <!--others 제목-->
+                    <li>
+                        <p class="skills_subtit"><a href="#">OTHERS</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--work 섹션-->
+    <section id="work">
+        <!--work 제목-->
+        <div class="contents_tit">
+            <h2><a href="#">WORK</a></h2>
+        </div>
+
+
+        <div id="work_list">
+            <!--프로필페이지2 포트폴리오-->
+            <div id="work1">
+                <!--포트폴리오 목업 왼쪽 사진 영역-->
+                <div class="work_left">
+                    <img src="img/mockup_01.png" alt="프로필 버전2 사이트">
+                </div>
+
+
+                <!--포트폴리오 오른쪽 텍스트 영역-->
+                <div class="work_right">
+                    <div class="work_txtbox">
+                        <p class="work_subtit"><a href="#">Profile ver.2</a></p>
+                        <p class="work_keyword"><mark>#SCSS #반응형 #웹표준</mark></p>
+                        <p class="txt">오직 HTML과 CSS만을 이용하여 구현한 사이트입니다. JQUERY없이 checkbox속성과 animation속성을 이용하여 메인메뉴를 구성하였고, 모든 스타일은 SCSS를 사용하여 유지보수가 용이하도록 구현하였습니다.</p>
+                        <span class="visit_btn"><a href="http://HYEMEMprofile.dothome.co.kr/" title="프로필 버전2 바로가기" target="_blank">VIEW SITE</a></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- dayafterday 가로스크롤 사이트 -->
+            <div id="work6">
+                <!--포트폴리오 왼쪽 목업 사진 영역-->
+                <div class="work_left">
+                    <img src="img/mockup_06.png" alt="데이에프터데이 리뉴얼 사이트">
+                </div>
+
+                <!--포트폴리오 오른쪽 텍스트 영역-->
+                <div class="work_right">
+                    <div class="work_txtbox">
+                        <p class="work_subtit"><a href="#">Day After Day</a></p>
+                        <p class="work_keyword"><mark>#가로스크롤 #애니메이션 #하드코딩 </mark></p>
+                        <p class="txt">jQuery BOM의 scrolTop()과 css의 position 속성을 이용하여, 플러그인 연결없이 100% 하드코딩으로 제작한 가로스크롤 사이트입니다. 1920px 해상도에 최적화 되어 있습니다. </p>
+                        <span class="visit_btn"><a href="http://dayafterday.dothome.co.kr/" title="데이에프터데이 바로가기" target="_blank">VIEW SITE</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 케이투 포트폴리오 -->
+            <div id="work3">
+                <!--포트폴리오 목업 왼쪽 사진 영역-->
+                <div class="work_left">
+                    <img src="img/mockup_03.png" alt="K2 Korea 사이트">
+                </div>
+
+
+                <!--포트폴리오 오른쪽 텍스트 영역-->
+                <div class="work_right">
+                    <div class="work_txtbox">
+                        <p class="work_subtit"><a href="#">K2 Korea</a></p>
+                        <p class="work_keyword"><mark>#적응형사이트  #2depth navigation</mark></p>
+                        <p class="txt">해상도 980px이상부터 반응형이고, 980px이하부터는 모바일 버전으로 열리는 적응형 웹사이트입니다. 또한, PC버전에서는 각 서브메뉴의 높이에 따라 유동적으로 변화하는 2 depth navigation을 구현하였습니다.</p>
+                        <span class="visit_btn"><a href="http://k2korea.dothome.co.kr/" title="K2 Korea 바로가기" target="_blank">VIEW SITE</a></span>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!--벤자민무어 포트폴리오-->
+            <div id="work4">
+                <!--포트폴리오 목업 왼쪽 사진 영역-->
+                <div class="work_left">
+                    <img src="img/mockup_04.png" alt="벤자민무어 리뉴얼 사이트">
+                </div>
+
+
+                <!--포트폴리오 오른쪽 텍스트 영역-->
+                <div class="work_right">
+                    <div class="work_txtbox">
+                        <p class="work_subtit"><a href="#">BenjaminMoore</a></p>
+                        <p class="work_keyword"><mark>#모달창 #비주얼 슬라이드 #아코디언 메뉴 </mark></p>
+                        <p class="txt">모바일 버전에서는 사용자의 편의성을 고려하여,
+                            터치에 반응하는 swiper 플러그인을 연결하였으며,
+                            이 외에 PC버전 메뉴, 모바일 아코디언 메뉴,
+                            반응형 비주얼 슬라이드, 제품 슬라이드 모두
+                            하드코딩으로 구현하였습니다.</p>
+                        <span class="visit_btn"><a href="http://benjaminmoore.dothome.co.kr/" title="벤자민무어 바로가기" target="_blank">VIEW SITE</a></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--트로피카나 포트폴리오-->
+            <div id="work2">
+                <!--포트폴리오 왼쪽 목업 사진 영역-->
+                <div class="work_left">
+                    <img src="img/mockup_02.png" alt="트로피카나 리뉴얼 사이트">
+                </div>
+
+                <!--포트폴리오 오른쪽 텍스트 영역-->
+                <div class="work_right">
+                    <div class="work_txtbox">
+                        <p class="work_subtit"><a href="#">Tropicana</a></p>
+                        <p class="work_keyword"><mark>#웹접근성 #인클루드 #skip메뉴</mark></p>
+                        <p class="txt">기존에 없던 사이트를 기획부터, 디자인,코딩까지 100% 창작한 표준형 웹사이트입니다. 웹 접근성을 고려하여 skip 메뉴를 삽입하였고, 메인페이지와 서브페이지는 반복되는 부분은 인클루드를 통해 효율적으로 코딩했습니다.</p>
+                        <span class="visit_btn"><a href="http://tropicana.dothome.co.kr/" title="트로피카나 바로가기" target="_blank">VIEW SITE</a></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--현대카드 포트폴리오-->
+            <div id="work5">
+                <!--포트폴리오 목업 왼쪽 사진 영역-->
+                <div class="work_left">
+                    <img src="img/mockup_05.png" alt="현대카드 리뉴얼 사이트">
+                </div>
+
+
+                <!--포트폴리오 오른쪽 텍스트 영역-->
+                <div class="work_right">
+                    <div class="work_txtbox">
+                        <p class="work_subtit"><a href="#">Hyundai Card</a></p>
+                        <p class="work_keyword"><mark>#숫자형 페이저 #풀페이지 디자인</mark></p>
+                        <p class="txt">풀페이지 디자인으로 반응형이 되지 않는 사이트를
+                            Media Query를 통해 반응형으로 리뉴얼 하였고,
+                            배너 슬라이드를 숫자형 페이저와 전후 버튼이 모두
+                            작동하도록 하드코딩으로 구현했습니다.</p>
+                        <span class="visit_btn"><a href="http://premiumhyundai.dothome.co.kr/" title="현대카드 바로가기" target="_blank">VIEW SITE</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--about 섹션-->
+    <section id="about">
+        <!--about 제목-->
+        <div class="contents_tit">
+            <h2><a href="#">ABOUT</a></h2>
+        </div>
+
+        <!--about 내용-->
+        <div id="about1">
+            <!--about 일러스트-->
+            <img src="img/about_img.png" alt="일러스트">
+
+            <!--about 텍스트-->
+            <div id="about_txtbox">
+                <p id="about_subtit"><mark>끊임없이 소통하고 발전할 인재</mark></p>
+                <p id="about_txt"> 저는 '정보미디어학과'를 전공하며, 정보통신 분야와 영상 제작에 대한 지식을 배웠습니다. 학교 수업으로 수강하게 된 웹 정보 시스템 수업은 학과에서 배운 코딩과 디자인 이 두 가지를 모두 활용할 수 있는 수업이기 때문에 흥미를 얻게 되었고, 웹 퍼블리셔라는 목표까지 세우게 되었습니다. 목표를 달성하기 위해 5개월 과정의 국비 교육을 수강하게 되었고, 이를 통해 직무에 대한 전문적인 공부를 이어나갈 수 있었습니다. 이러한 <mark>저의 전공지식과 실무 위주의 교육 수강</mark>은 디자이너와 개발자의 고충을 이해하고, 배려하며 소통하는 데에도 큰 강점으로 작용할 것이라고 생각합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--contact 섹션-->
+    <section id="contact">
+
+        <!--contact 제목-->
+        <div class="contents_tit">
+            <h2><a href="#">CONTACT</a></h2>
+        </div>
+
+        <!--contact 내용-->
+        <div id="contact1">
+
+            <!--contact 데코레이션 도형 및 사진-->
+            <div id="round_sqr3"></div>
+            <div id="round_sqr4"></div>
+            <div id="large_circle2"></div>
+            <img src="img/contact_img_01.png" alt="사람 일러스트" id="contact_img_01">
+            <img src="img/contact_img_02.png" alt="꽃 일러스트" id="contact_img_02">
+
+            <!--contact 텍스트 영역-->
+            <div id="contact_txtbox">
+                <p id="contact_tit"><a href="#">CONTACT</a></p>
+                <p id="phone"><a href="#"><span>Phone : </span>010-0000-0000</a></p>
+                <p id="email"><a href="#"><span>Email : </span>hyemem@google.com</a></p>
+
+                <!--contact 아이콘 영역-->
+                <ul id="icon_list">
+                    <li><a href="https://github.com/hyemem" title="깃허브 바로가기" target="_blank"><img src="img/icon_01.png" alt="Github"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC-3CtGIzBsp-XrEovVdPDcw" title="유투브 바로가기" target="_blank"><img src="img/icon_02.png" alt="youtube"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="lib//jquery-1.11.1.min.js"></script>
+    <script src="lib/jquery.easing.1.3.min.js"></script>
+    <script src="js/scroll_animation.js"></script>
+    <script src="js/half_scroll.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
